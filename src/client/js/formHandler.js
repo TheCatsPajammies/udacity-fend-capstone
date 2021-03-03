@@ -33,11 +33,14 @@ function handleSubmit(event) {
 
                                                                 <div class="polaroid image1" polaroid-caption="The weather in ${destination} is currently
                                                                 ${temp} degrees Celsius with ${weatherDesc}">
-                                                                    
-                                                                    <img src=${pictureURL} alt="${destination}">
-                
+                                                                <div  class="submit-holder">
+                                                                    <button id="save">Save Trip?</button>
+                                                                    <button id="delete">Delete Trip!</button>
                                                                 </div>
-                                                            
+                                                                    <img src=${pictureURL} alt="${destination}">
+                                                                    
+                                                                </div>
+                                                                
                                                             </div>`
         })
         //document.getElementById('results').innerHTML = `<p>Destination = ${destination}<br>Latitude = ${latitude}<br>Longitude = ${longitude}</p>`
