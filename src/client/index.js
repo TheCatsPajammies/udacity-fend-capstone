@@ -1,4 +1,5 @@
 import { handleSubmit } from './js/formHandler'
+import { deleteTrip } from './js/deleteTrip'
 
 
 
@@ -11,5 +12,6 @@ import './styles/form.scss'
 import './styles/header.scss'
 
 export {
-    handleSubmit
+    handleSubmit,
+    deleteTrip
 }

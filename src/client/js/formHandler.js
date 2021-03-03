@@ -29,13 +29,14 @@ function handleSubmit(event) {
             .then(res2 => res2.json())
             .then(function(res2) {
             let pictureURL = res2.hits[0].webformatURL
+            
             document.getElementById('results').innerHTML = `<div class="picture-container">
 
                                                                 <div class="polaroid image1" polaroid-caption="The weather in ${destination} is currently
                                                                 ${temp} degrees Celsius with ${weatherDesc}">
                                                                 <div  class="submit-holder">
                                                                     <button id="save">Save Trip?</button>
-                                                                    <button id="delete">Delete Trip!</button>
+                                                                    <button id="delete" onclick="Client.deleteTrip()">Delete Trip!</button>
                                                                 </div>
                                                                     <img src=${pictureURL} alt="${destination}">
                                                                     
