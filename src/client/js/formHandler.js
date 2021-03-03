@@ -6,7 +6,6 @@ function handleSubmit(event) {
 
     // check what text was put into the form field
     let location = document.getElementById('location').value
-    Client.checkForName(location)
 
     console.log("Location submitted!")
     fetch('http://localhost:8080/test')
