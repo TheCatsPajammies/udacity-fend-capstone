@@ -6,7 +6,12 @@ function handleSubmit(event) {
     const WEATHERBIT_API_KEY = "40f1362e73ec49da95974fd37b7ffdcd";
 
     // check what text was put into the form field
-    let location = document.getElementById('location').value
+    let location = document.getElementById('location').value;
+    let depDateText = document.getElementById('trip-date').value;
+    // count down variables
+    let timeStamp = (new Date(depDateText).getTime()) / 1000;
+    let timeStampNow = (Date.now()) / 1000;
+    let daysUntilTrip = Math.round((timeStamp - timeStampNow) / 86400);
 
     console.log("Location submitted!")
     // calls Geonames
@@ -48,9 +53,10 @@ function handleSubmit(event) {
                                                                     
 
                                                                     <div class="caption-holder">
-                                                                        <p>Your trip is on 4/7/2021</p>
+                                                                        <p>Your trip to ${destination} is ${daysUntilTrip} days from now.</p>
+                                                                        
                                                                         <p>${destination}'s weather is currently
-                                                                        ${temp} degrees Celsius with ${weatherDesc}</p>
+                                                                        ${temp} degrees Celsius with ${weatherDesc}.</p>
                                                                     </div>
 
                                                                     <div  class="submit-holder">

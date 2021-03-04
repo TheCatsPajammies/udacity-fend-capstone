@@ -1,5 +1,5 @@
 function saveTrip() {
-
+    
     alert("Trip saved!")
 }
 
