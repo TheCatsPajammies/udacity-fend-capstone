@@ -1,5 +1,6 @@
 import { handleSubmit } from './js/formHandler'
 import { deleteTrip } from './js/deleteTrip'
+import { saveTrip } from './js/saveTrip'
 
 
 
@@ -13,5 +14,6 @@ import './styles/header.scss'
 
 export {
     handleSubmit,
-    deleteTrip
+    deleteTrip,
+    saveTrip
 }
