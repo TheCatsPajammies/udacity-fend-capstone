@@ -46,7 +46,9 @@ function handleSubmit(event) {
                                                                 <div class="polaroid image1">
                                                                     <img src=${pictureURL} alt="${destination}">
                                                                     
-                                                                    <div class="submit-holder">
+
+                                                                    <div class="caption-holder">
+                                                                        <p>Your trip is on 4/7/2021</p>
                                                                         <p>${destination}'s weather is currently
                                                                         ${temp} degrees Celsius with ${weatherDesc}</p>
                                                                     </div>
