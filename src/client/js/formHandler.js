@@ -1,3 +1,7 @@
+ const tripData = {};
+
+ let savedTrips = [];
+
 function handleSubmit(event) {
     event.preventDefault()
     
@@ -45,6 +49,14 @@ function handleSubmit(event) {
             console.log(temp)
             console.log(weatherDesc)
             console.log(pictureURL)
+            
+            tripData.city = destination
+            tripData.temperature = temp
+            tripData.weather = weatherDesc
+            tripData.pic = pictureURL
+            tripData.departDate = daysUntilTrip
+            
+            console.log(tripData);
             
             document.getElementById('results').innerHTML = `<div class="picture-container">
                                                                     
