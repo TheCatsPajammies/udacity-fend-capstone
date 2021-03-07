@@ -25,9 +25,12 @@
         
             <section>
                 <form onsubmit="return Client.handleSubmit(event)">
+                    <p>Where would you like to travel?</p>
                     <input required id="location" type="text" name="input" value="" onblur="onBlur()" placeholder="Where would you like to go?">
+                    <p>When would you like to travel?</p>
                     <input required id="trip-date" type="date" placeholder="When are you planning to arrive?">
                     <input type="submit" name="" value="submit" onsubmit="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                    <input type="submit" id="clear-trips" name="" value="Clear Trips" onclick="return Client.clearTrips()">
                 </form>
             </section>
         
@@ -36,6 +39,15 @@
                 <strong></strong>
                 <div id="results">
                 <!--This is where the trip info will post to--> 
+                </div>
+            </section>
+
+            <section>
+                <div class="saved-trips">
+                    <p>Upcoming trips</p>
+                    <ul id="saved-trips">
+                    <!--This is where the saved trips will populate-->
+                    </ul>
                 </div>
             </section>
         </main>
