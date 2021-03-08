@@ -24,3 +24,15 @@ input {
 #save, #delete {
     cursor: pointer;
 }
+
+#saved-trip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 3rem;
+}
+
+#upcoming-trips {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}

@@ -17,5 +17,5 @@ export {
     handleSubmit,
     deleteTrip,
     saveTrip,
-    clearTrips
+    clearTrips,
 }

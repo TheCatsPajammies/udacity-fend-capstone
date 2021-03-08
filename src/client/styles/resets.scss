@@ -64,10 +64,12 @@ img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-    height: 200px;
-	width: 200px;
+    height: 300px;
+	width: 300px;
+    border-radius: 5px;
 }
 
+/*
 .picture-container
 {
     position: relative;
@@ -75,19 +77,20 @@ img {
     height: 500px;
     padding: 10px 0px 10px 0px;
 }
+*/
 
-.picture-container .polaroid
+.polaroid
 {
-    position: absolute;
+    position: relative;
     border: 1px solid darkgrey;
     background-color: white;
     padding: 15px 15px 60px 15px;
     box-shadow: 5px 10px 10px darkgrey;
 }
 
-.picture-container .polaroid:after{
+.polaroid:after{
     content: attr(polaroid-caption);
-    position: absolute;
+    position: relative;
     bottom: 0px;
     left: 0px;
     width: calc(100%);
@@ -98,8 +101,9 @@ img {
     font-family: 'Courier New', Courier, monospace;
 }
 
-.picture-container .image1
+.image1
 {
-    left: 30px;
-    top: 15px;
+    left: auto;
+    top: auto;
+    margin: 10px;
 }

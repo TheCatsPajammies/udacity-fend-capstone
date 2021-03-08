@@ -12,24 +12,24 @@
 
     <body>
 
-        <header>
-            <div class="">
-                Logo
+        <div class="header">
+            <a href="#default" class="logo">Weather App</a>
+            <div class="header-right">
+              <a class="active" href="#home">Home</a>
+              <a href="#contact">Contact</a>
+              <a href="#about">About</a>
             </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
+          </div>
 
         <main>
         
             <section>
                 <form onsubmit="return Client.handleSubmit(event)">
-                    <p>Where would you like to travel?</p>
+                    <p><u>Where would you like to travel?</u></p>
                     <input required id="location" type="text" name="input" value="" onblur="onBlur()" placeholder="Where would you like to go?">
-                    <p>When would you like to travel?</p>
+                    <p><u>When would you like to travel?</u></p>
                     <input required id="trip-date" type="date" placeholder="When are you planning to arrive?">
-                    <input type="submit" name="" value="submit" onsubmit="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                    <input type="submit" name="" value="Submit" onsubmit="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                     <input type="button" id="clear-trips" name="" value="Clear Trips" onclick="return Client.clearTrips()">
                 </form>
             </section>
@@ -41,7 +41,7 @@
                     <!--Buttons to save or delete trip populate here-->
                 </div>
                 <div id="results">
-                <!--This is where the trip info will post to--> 
+                    <!--This is where the trip info will post to--> 
                 </div>
                 
             </section>
@@ -58,7 +58,11 @@
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p>Page created by Paul Thompson</p>
+            <p>Data for this app is obtained from:</p>
+            <p>Geonames</p>
+            <p>WeatherBit</p>
+            <p>Pixabay</p>
             <!--<button>This is a button</button>-->
         </footer>
         <!--
