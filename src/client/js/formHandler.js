@@ -57,6 +57,11 @@ function handleSubmit(event) {
             tripData.departDate = daysUntilTrip
             
             console.log(tripData);
+
+            document.getElementById('save-delete').innerHTML = `<div  class="submit-holder">
+                                                                    <button id="save" onclick="Client.saveTrip()">Save Trip</button>
+                                                                    <button id="delete" onclick="Client.deleteTrip()">Delete Trip</button>
+                                                                </div>`
             
             document.getElementById('results').innerHTML = `<div class="picture-container">
                                                                     
@@ -71,10 +76,6 @@ function handleSubmit(event) {
                                                                         ${temp} degrees Celsius with ${weatherDesc}.</p>
                                                                     </div>
 
-                                                                    <div  class="submit-holder">
-                                                                        <button id="save" onclick="Client.saveTrip()">Save Trip</button>
-                                                                        <button id="delete" onclick="Client.deleteTrip()">Delete Trip</button>
-                                                                    </div>
 
                                                                 </div>
                                                                 </div>
