@@ -19,7 +19,7 @@ function handleSubmit(event) {
 
     console.log("Location submitted!")
     // calls Geonames
-    fetch('http://localhost:8080/test')
+    //fetch('http://localhost:8080/test')
     fetch(`http://api.geonames.org/searchJSON?q=${location}&maxRows=10&username=${GEONAMES_API_KEY}`)
     .then(res => res.json())
     .then(function(res) {
