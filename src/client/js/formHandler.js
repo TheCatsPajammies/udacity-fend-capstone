@@ -33,10 +33,13 @@ function handleSubmit(event) {
         fetch(`https://api.weatherbit.io/v2.0/forecast/daily?&lat=${latitude}&lon=${longitude}&key=${WEATHERBIT_API_KEY}`)
         .then(res1 => res1.json())
         .then(function(res1) {
-            let weatherDesc = res1.data[0].weather.description
-            let temp = res1.data[0].temp
-            console.log(res1.data[0].weather.description)
-            console.log(JSON.stringify(res1.data[0].weather.description))
+            let weatherDesc = res1.data[daysUntilTrip].weather.description
+            let temp = res1.data[daysUntilTrip].temp
+            let date = res1.data[daysUntilTrip].datetime
+            console.log(res1.data[daysUntilTrip].weather.description)
+            console.log(JSON.stringify(res1.data[daysUntilTrip].weather.description))
+            console.log(res1.data[daysUntilTrip])
+            
             
             // calls Pixabay using the location from the form input gets a picture
             fetch(`https://pixabay.com/api/?&q=${location}&key=${PIXABAY_API_KEY}&image_type=photo`)
@@ -72,7 +75,7 @@ function handleSubmit(event) {
                                                                     <div class="caption-holder">
                                                                         <p>Your trip to ${destination} is ${daysUntilTrip} days from now.</p>
                                                                         
-                                                                        <p>${destination}'s weather is currently
+                                                                        <p>${destination}'s weather forecast for ${date} is 
                                                                         ${temp} degrees Celsius with ${weatherDesc}.</p>
                                                                     </div>
 
@@ -83,7 +86,7 @@ function handleSubmit(event) {
                                                             </div>`
         })
         //document.getElementById('results').innerHTML = `<p>Destination = ${destination}<br>Latitude = ${latitude}<br>Longitude = ${longitude}</p>`
-        document.getElementById('location').reset()
+        
     })
 })}
 
